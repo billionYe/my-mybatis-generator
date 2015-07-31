@@ -1,1 +1,1 @@
-dfrvrever
+修改mybatis-generator 生产自己项目框架所需要的代码。
