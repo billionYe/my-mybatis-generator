@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/repo/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+	<!-- auth_wifi -->
+	<context id="auth_wifi"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+		<!-- 
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.hpwifi.cityportal.service.authwifi" />
+            <property name="implementationPackage" value="com.hpwifi.cityportal.service.authwifi" />
+            <property name="targetProject" value="D:/sourcecode/java/hpwifi/digitalcityV2API/src/main/java" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+         -->
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://123.56.44.236:3306/auth_wifi?characterEncoding=UTF-8" userId="zhihui" password="hp123456" />
+		
+		<javaModelGenerator  targetPackage="com.hpwifi.domain.authwifi.po" targetProject="D:/sourcecode/java/hpwifi/digitalcityV2API/src/main/java"/>
+		<sqlMapGenerator targetPackage="mybatis.authwifi"  targetProject="D:/sourcecode/java/hpwifi/digitalcityV2API/src/main/resources"/>
+		<javaClientGenerator  targetPackage="com.hpwifi.domain.authwifi.mapper"  type="XMLMAPPER" targetProject="D:/sourcecode/java/hpwifi/digitalcityV2API/src/main/java"/>
+		<!-- 婊子 -->
+		<table domainObjectName="AdAdvertis" tableName="ad_advertis"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="AdAdvertisMore" tableName="ad_advertis_more"  ></table>
+		<table domainObjectName="AdCollect" tableName="ad_collect"  ></table>
+		<table domainObjectName="AdEnter" tableName="ad_enter"  ></table>
+		<table domainObjectName="AdShow" tableName="ad_show"  ></table>
+		<table domainObjectName="AgentChildDay" tableName="agent_child_day"  ></table>
+		<table domainObjectName="AgentChildHour" tableName="agent_child_hour"  ></table>
+		<table domainObjectName="AgentOnlineUser" tableName="agent_online_user"  ></table>
+		<table domainObjectName="AgentSale" tableName="agent_sale"  ></table>
+		<table domainObjectName="AgentShopDay" tableName="agent_shop_day"  ></table>
+		<table domainObjectName="AppClickLog" tableName="app_click_log"  ></table>
+		<table domainObjectName="AuthAgent" tableName="auth_agent"  ></table>
+		<table domainObjectName="AuthAgentBuydevice" tableName="auth_agent_buydevice"  ></table>
+		<table domainObjectName="AuthAgentBuydeviceCopy" tableName="auth_agent_buydevice_copy"  ></table>
+		<table domainObjectName="AuthAgentBuyorder" tableName="auth_agent_buyorder"  ></table>
+		<table domainObjectName="AuthAgentLimit" tableName="auth_agent_limit"  ></table>
+		<table domainObjectName="AuthAgentOrder" tableName="auth_agent_order"  ></table>
+		<table domainObjectName="AuthAgentPayCfg" tableName="auth_agent_pay_cfg"  ></table>
+		<table domainObjectName="AuthAgentSocialShareCfg" tableName="auth_agent_social_share_cfg"  ></table>
+		<table domainObjectName="AuthAgentUser" tableName="auth_agent_user"  ></table>
+		<table domainObjectName="AuthBlackList" tableName="auth_black_list"  ></table>
+		<table domainObjectName="AuthConnections" tableName="auth_connections"  ></table>
+		<table domainObjectName="AuthConnectionsHistory" tableName="auth_connections_history"  ></table>
+		<table domainObjectName="AuthConnectionsTmp" tableName="auth_connections_tmp"  ></table>
+		<table domainObjectName="AuthGroup" tableName="auth_group"  ></table>
+		<table domainObjectName="AuthHotspot" tableName="auth_hotspot"  ></table>
+		<table domainObjectName="AuthHotspotCount" tableName="auth_hotspot_count"  ></table>
+		<table domainObjectName="AuthShop" tableName="auth_shop"  ></table>
+		<table domainObjectName="AuthShopCard" tableName="auth_shop_card"  ></table>
+		<table domainObjectName="AuthShopCardAwards" tableName="auth_shop_card_awards"  ></table>
+		<table domainObjectName="AuthShopCardDetail" tableName="auth_shop_card_detail"  ></table>
+		<table domainObjectName="AuthShopCoupon" tableName="auth_shop_coupon"  ></table>
+		<table domainObjectName="AuthShopCouponDetail" tableName="auth_shop_coupon_detail"  ></table>
+		<table domainObjectName="AuthShopLimit" tableName="auth_shop_limit"  ></table>
+		<table domainObjectName="AuthShopMid" tableName="auth_shop_mid"  ></table>
+		<table domainObjectName="AuthShopModule" tableName="auth_shop_module"  ></table>
+		<table domainObjectName="AuthShopPrintDevice" tableName="auth_shop_print_device"  ></table>
+		<table domainObjectName="AuthShopWeixin" tableName="auth_shop_weixin"  ></table>
+		<table domainObjectName="AuthSmsLog" tableName="auth_sms_log"  ></table>
+		<table domainObjectName="AuthTemplate" tableName="auth_template"  ></table>
+		<table domainObjectName="AuthUser" tableName="auth_user"  ></table>
+		<table domainObjectName="AuthUserGroupRelate" tableName="auth_user_group_relate"  ></table>
+		<table domainObjectName="AuthUsergroup" tableName="auth_usergroup"  ></table>
+		<table domainObjectName="Counter" tableName="counter"  ></table>
+		<table domainObjectName="CsOrder" tableName="cs_order"  ></table>
+		<table domainObjectName="CsProduct" tableName="cs_product"  ></table>
+		<table domainObjectName="DeviceMacWhite" tableName="device_mac_white"  ></table>
+		<table domainObjectName="DeviceRouter" tableName="device_router"  ></table>
+		<table domainObjectName="DicBaseArea" tableName="dic_base_area"  ></table>
+		<table domainObjectName="DicBaseInfo" tableName="dic_base_info"  ></table>
+		<table domainObjectName="DicBaseInfoType" tableName="dic_base_info_type"  ></table>
+		<table domainObjectName="DicCategory" tableName="dic_category"  ></table>
+		<table domainObjectName="DicCity" tableName="dic_city"  ></table>
+		<table domainObjectName="DicCollect" tableName="dic_collect"  ></table>
+		<table domainObjectName="DicCommission" tableName="dic_commission"  ></table>
+		<table domainObjectName="DicCounty" tableName="dic_county"  ></table>
+		<table domainObjectName="DicDevice" tableName="dic_device"  ></table>
+		<table domainObjectName="DicMobile" tableName="dic_mobile"  ></table>
+		<table domainObjectName="DicNetwork" tableName="dic_network"  ></table>
+		<table domainObjectName="DicProfit" tableName="dic_profit"  ></table>
+		<table domainObjectName="DicProvince" tableName="dic_province"  ></table>
+		<table domainObjectName="DicSaleteam" tableName="dic_saleteam"  ></table>
+		<table domainObjectName="FCategory" tableName="f_category"  ></table>
+		<table domainObjectName="FPage" tableName="f_page"  ></table>
+		<table domainObjectName="PPermission" tableName="p_permission"  ></table>
+		<table domainObjectName="PRole" tableName="p_role"  ></table>
+		<table domainObjectName="PRolepermission" tableName="p_rolepermission"  ></table>
+		<table domainObjectName="PStaffrole" tableName="p_staffrole"  ></table>
+		<table domainObjectName="RolesPermissions" tableName="roles_permissions"  ></table>
+		<table domainObjectName="ShopOnlineUser" tableName="shop_online_user"  ></table>
+		<table domainObjectName="SmsLog" tableName="sms_log"  ></table>
+		<table domainObjectName="SmsRechargeLog" tableName="sms_recharge_log"  ></table>
+		<table domainObjectName="SmsTemplate" tableName="sms_template"  ></table>
+		<table domainObjectName="StDayArea" tableName="st_day_area"  ></table>
+		<table domainObjectName="StDayLogin" tableName="st_day_login"  ></table>
+		<table domainObjectName="StDayLogin8history" tableName="st_day_login_8history"  ></table>
+		<table domainObjectName="StHourCount" tableName="st_hour_count"  ></table>
+		<table domainObjectName="StLoginLog" tableName="st_login_log"  ></table>
+		<table domainObjectName="StMonthLogin" tableName="st_month_login"  ></table>
+		<table domainObjectName="StatDay" tableName="stat_day"  ></table>
+		<table domainObjectName="StatMonth" tableName="stat_month"  ></table>
+		<table domainObjectName="UniHaoduan" tableName="uni_haoduan"  ></table>
+		<table domainObjectName="UserRoleModule" tableName="user_role_module"  ></table>
+		<table domainObjectName="UserRoles" tableName="user_roles"  ></table>
+		<table domainObjectName="Users" tableName="users"  ></table>
+		<table domainObjectName="UsersLoginLog" tableName="users_login_log"  ></table>
+		<table domainObjectName="WapActivityFeature" tableName="wap_activity_feature"  ></table>
+		<table domainObjectName="WapActivityMenu" tableName="wap_activity_menu"  ></table>
+		<table domainObjectName="WapBanner" tableName="wap_banner"  ></table>
+		<table domainObjectName="WapCat" tableName="wap_cat"  ></table>
+		<table domainObjectName="WapNav" tableName="wap_nav"  ></table>
+		<table domainObjectName="WapStatLog" tableName="wap_stat_log"  ></table>
+		<table domainObjectName="WapUser" tableName="wap_user"  ></table>
+		<table domainObjectName="WifiUser" tableName="wifi_user"  ></table>
+		<table domainObjectName="WifiUserDevice" tableName="wifi_user_device"  ></table>
+		<table domainObjectName="WifiUserOnlineTime" tableName="wifi_user_online_time"  ></table>
+		<table domainObjectName="WifiUserShop" tableName="wifi_user_shop"  ></table>
+		<table domainObjectName="WxUser" tableName="wx_user"  ></table>
+		<table domainObjectName="ZnAppActivityFeature" tableName="zn_app_activity_feature"  ></table>
+		<table domainObjectName="ZnAppAd" tableName="zn_app_ad"  ></table>
+		<table domainObjectName="ZnAppAgentArea" tableName="zn_app_agent_area"  ></table>
+		<table domainObjectName="ZnAppAgentCategroy" tableName="zn_app_agent_categroy"  ></table>
+		<table domainObjectName="ZnAppAgentFastbuy" tableName="zn_app_agent_fastbuy"  ></table>
+		<table domainObjectName="ZnAppAgentGroupbuy" tableName="zn_app_agent_groupbuy"  ></table>
+		<table domainObjectName="ZnAppAgentInfo" tableName="zn_app_agent_info"  ></table>
+		<table domainObjectName="ZnAppAgentMsg" tableName="zn_app_agent_msg"  ></table>
+		<table domainObjectName="ZnAppAgentMsgRead" tableName="zn_app_agent_msg_read"  ></table>
+		<table domainObjectName="ZnAppBanner" tableName="zn_app_banner"  ></table>
+		<table domainObjectName="ZnAppCategoryBanner" tableName="zn_app_category_banner"  ></table>
+		<table domainObjectName="ZnAppClient" tableName="zn_app_client"  ></table>
+		<table domainObjectName="ZnAppComment" tableName="zn_app_comment"  ></table>
+		<table domainObjectName="ZnAppCouponSet" tableName="zn_app_coupon_set"  ></table>
+		<table domainObjectName="ZnAppFastbuyGroupbuy" tableName="zn_app_fastbuy_groupbuy"  ></table>
+		<table domainObjectName="ZnAppFavorites" tableName="zn_app_favorites"  ></table>
+		<table domainObjectName="ZnAppFavoritesGroupbuy" tableName="zn_app_favorites_groupbuy"  ></table>
+		<table domainObjectName="ZnAppFavoritesProduct" tableName="zn_app_favorites_product"  ></table>
+		<table domainObjectName="ZnAppGroupBuy" tableName="zn_app_group_buy"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppHotGroupbuy" tableName="zn_app_hot_groupbuy"  ></table>
+		<table domainObjectName="ZnAppInstallDay" tableName="zn_app_install_day"  ></table>
+		<table domainObjectName="ZnAppMobileClick" tableName="zn_app_mobile_click"  ></table>
+		<table domainObjectName="ZnAppMsg" tableName="zn_app_msg"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppOrder" tableName="zn_app_order"  >
+			<generatedKey column="orderid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppOrderDetail" tableName="zn_app_order_detail"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppOrderGroupBuy" tableName="zn_app_order_group_buy"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppPay" tableName="zn_app_pay"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppProduct" tableName="zn_app_product"  ></table>
+		<table domainObjectName="ZnAppProductCategroy" tableName="zn_app_product_categroy"  ></table>
+		<table domainObjectName="ZnAppProductTmp" tableName="zn_app_product_tmp"  ></table>
+		<table domainObjectName="ZnAppShopGroupbuynum" tableName="zn_app_shop_groupbuynum"  ></table>
+		<table domainObjectName="ZnAppShopModule" tableName="zn_app_shop_module"  ></table>
+		<table domainObjectName="ZnAppShopScore" tableName="zn_app_shop_score"  ></table>
+		<table domainObjectName="ZnAppShopTop" tableName="zn_app_shop_top"  ></table>
+		<table domainObjectName="ZnAppTopic" tableName="zn_app_topic"  ></table>
+		<table domainObjectName="ZnAppTopicCategroy" tableName="zn_app_topic_categroy"  ></table>
+		<table domainObjectName="ZnAppTopicGroupbuy" tableName="zn_app_topic_groupbuy"  ></table>
+		<table domainObjectName="ZnAppUser" tableName="zn_app_user"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppUserCoupon" tableName="zn_app_user_coupon"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppVersion" tableName="zn_app_version"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ZnAppVersionHis" tableName="zn_app_version_his"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<!--
+		<table domainObjectName="ZnStSettleAccounts" tableName="zn_st_settle_accounts"  ></table>
+		  视图  
+		<table domainObjectName="AuthAgent" tableName="rechargeListView"  />
+		<table domainObjectName="AuthAgent" tableName="rechargelistview"  />
+		-->
+		
+		<table domainObjectName="AuthBussinessDepartment" tableName="auth_bussiness_department"  />
+		<!-- <table domainObjectName="AuthBussinessNews" tableName="auth_bussiness_news"  /> -->
+		
+
+
+	</context>
+</generatorConfiguration>
+

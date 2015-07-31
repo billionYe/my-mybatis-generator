@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/sourcecode/apache-maven-2.2.1/repo/com/mysql/mysql-connector/5.0.7/mysql-connector-5.0.7-bin.jar" />
+	
+	<context id="MyBatis3" targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		 
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+		
+ 		<!-- 
+		<plugin type="org.mybatis.generator.plugins.MybatisCriteriaPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MybatisCriteriaPlugin2" />
+		-->
+		<!--  
+		<plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+			<property name="targetPackage" value="com.hongxu.framework.o2o.base.service" />
+			<property name="implementationPackage" value="com.hongxu.framework.o2o.base.service" />
+			<property name="targetProject" value="dest" />
+			<property name="enableInsert" value="true" />
+			<property name="enableUpdateByExampleSelective" value="true" />
+			<property name="enableInsertSelective" value="true" />
+			<property name="enableUpdateByPrimaryKey" value="true" />
+			<property name="enableDeleteByPrimaryKey" value="true" />
+			<property name="enableDeleteByExample" value="true" />
+			<property name="enableUpdateByPrimaryKeySelective" value="true" />
+			<property name="enableUpdateByExample" value="true" />
+		</plugin>
+		-->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://mysql01.hx:3306/db_qrcode?characterEncoding=UTF-8" userId="root" password="abc!@#" />
+
+		<!--  
+		<javaModelGenerator  targetPackage="com.hongxu.commons.domain.qrcode.po" targetProject="D:\svnroot\hx-domain\src\main\java"/>
+
+		<sqlMapGenerator targetPackage="mybatis.qrcode"  targetProject="D:\svnroot\hx-domain\src\main\resources"/>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.hongxu.commons.domain.qrcode.mapper" targetProject="D:\svnroot\hx-domain\src\main\java"/>
+		-->
+		
+		<javaModelGenerator targetPackage="com" targetProject="D:\test" />
+		<sqlMapGenerator targetPackage="com"  targetProject="D:\test"/>
+		<javaClientGenerator targetPackage="com" targetProject="D:\test" type="XMLMAPPER" />
+		
+		<!--  
+		<table domainObjectName="O2oMediaType" tableName="o2o_media_type" />
+		<table domainObjectName="O2oRegion" tableName="o2o_region" />
+		<table domainObjectName="O2oUser" tableName="o2o_user" />		
+		<table domainObjectName="O2oImages" tableName="o2o_images" />
+		<table domainObjectName="O2oMessage" tableName="o2o_message" />
+		<table domainObjectName="O2oAds" tableName="o2o_ads" />
+		<table domainObjectName="O2oMedia" tableName="o2o_media" />
+		<table domainObjectName="O2oAdsOrderAction" tableName="o2o_ads_order_action" />
+		
+		<table domainObjectName="O2oAdsOrder" tableName="o2o_ads_order" />
+		-->
+		<table domainObjectName="Sample" tableName="tbl_sample" />
+
+	</context>
+	
+</generatorConfiguration>
+

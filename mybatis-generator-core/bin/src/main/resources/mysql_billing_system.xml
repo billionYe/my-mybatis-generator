@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/repo/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+	<!-- billing_system -->
+	<context id="billing_system"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+		<!--
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.hpwifi.billing.system.service.billingsystem" />
+            <property name="implementationPackage" value="com.hpwifi.billing.system.service.billingsystem" />
+            <property name="targetProject" value="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/java" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+        -->
+        
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://123.56.44.236:3306/billing_system?characterEncoding=UTF-8" userId="zhihui" password="hp123456" />
+		
+		<javaModelGenerator  targetPackage="com.hpwifi.billing.system.domain.billingsystem.po" targetProject="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/java"/>
+		<sqlMapGenerator targetPackage="mybatis.billingsystem"  targetProject="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/resources"/>
+		<javaClientGenerator  targetPackage="com.hpwifi.billing.system.domain.billingsystem.mapper"  type="XMLMAPPER" targetProject="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/java"/>
+		<!--
+		<table domainObjectName="AccessLogs" tableName="access_logs"  />
+		<table domainObjectName="CashBilling" tableName="cash_billing"  />
+		<table domainObjectName="CashBillingChangeLogs" tableName="cash_billing_change_logs"  />
+		<table domainObjectName="BookkeepingDetails" tableName="bookkeeping_details"  />
+		
+		<table domainObjectName="DictSettlementDate" tableName="dict_settlement_date"  />
+		<table domainObjectName="DictSystemCfg" tableName="dict_system_cfg"  />
+		<table domainObjectName="TaskExecuteLogs" tableName="task_execute_logs"  />
+		-->
+		<table domainObjectName="WithdrawCashDetails" tableName="withdraw_cash_details"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+	</context>
+	
+	<!-- <context id="auth_wifi"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.hpwifi.billing.system.service.billingsystem" />
+            <property name="implementationPackage" value="com.hpwifi.billing.system.service.billingsystem" />
+            <property name="targetProject" value="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/java" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+        
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://123.56.44.236:3306/auth_wifi?characterEncoding=UTF-8" userId="zhihui" password="hp123456" />
+		
+		<javaModelGenerator  targetPackage="com.hpwifi.billing.system.domain.authwifi.po" targetProject="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/java"/>
+		<sqlMapGenerator targetPackage="mybatis.authwifi"  targetProject="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/resources"/>
+		<javaClientGenerator  targetPackage="com.hpwifi.billing.system.domain.authwifi.mapper"  type="XMLMAPPER" targetProject="D:/sourcecode/java/hpwifi/billing_system/billing-system/src/main/java"/>
+		
+		<table domainObjectName="AuthAgent" tableName="auth_agent"  />
+		<table domainObjectName="AuthAgentPayCfg" tableName="auth_agent_pay_cfg"  />
+		<table domainObjectName="ZnAppOrder" tableName="zn_app_order"  />
+		<table domainObjectName="ZnAppPay" tableName="zn_app_pay"  />
+  
+	</context> -->
+</generatorConfiguration>
+

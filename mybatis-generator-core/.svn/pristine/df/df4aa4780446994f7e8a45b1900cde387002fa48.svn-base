@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/repo/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+	<!-- auth_wifi -->
+	<context id="auth_wifi"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+		<!-- 
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.hpwifi.paymentservice.service.authwifi" />
+            <property name="implementationPackage" value="com.hpwifi.paymentservice.service.authwifi" />
+            <property name="targetProject" value="D:/sourcecode/java/hpwifi/payment-service/src/main/java" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+         -->
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://116.213.142.30:3306/auth_wifi?characterEncoding=UTF-8" userId="root" password="ZhouBianYun_20141103_!@#" />
+		
+		<javaModelGenerator  targetPackage="com.hpwifi.paymentservice.domain.po" targetProject="D:/sourcecode/java/hpwifi/payment-service/src/main/java"/>
+		<sqlMapGenerator targetPackage="mybatis.authwifi"  targetProject="D:/sourcecode/java/hpwifi/payment-service/src/main/resources"/>
+		<javaClientGenerator  targetPackage="com.hpwifi.paymentservice.domain.mapper"  type="XMLMAPPER" targetProject="D:/sourcecode/java/hpwifi/payment-service/src/main/java"/>
+		<!-- 
+		
+		<table domainObjectName="ZnAppOrderDetail" tableName="zn_app_order_detail" />
+		
+		<table domainObjectName="ZnAppPay" tableName="zn_app_pay" />
+		
+		<table domainObjectName="ZnAppGroupBuy" tableName="zn_app_group_buy"  />
+		<table domainObjectName="ZnAppOrderGroupBuy" tableName="zn_app_order_group_buy"  />
+		<table domainObjectName="ZnAppProduct" tableName="zn_app_product"  />
+		<table domainObjectName="ZnAppGroupBuy" tableName="zn_app_group_buy"  />
+		<table domainObjectName="ZnAppOrderGroupBuy" tableName="zn_app_order_group_buy"  />
+		
+		<table domainObjectName="AuthAgent" tableName="auth_agent"  />
+		<table domainObjectName="CashAccount" tableName="cash_account"  />
+		
+		<table domainObjectName="AuthAgentLimit" tableName="auth_agent_limit"  />
+		<table domainObjectName="AuthShopLimit" tableName="auth_shop_limit"  />
+		-->
+		<table domainObjectName="AuthAgentPayCfg" tableName="auth_agent_pay_cfg"  />
+		
+  
+	</context>
+</generatorConfiguration>
+

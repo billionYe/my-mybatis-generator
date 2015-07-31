@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/repo/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+	<!-- db_p2p -->
+	<context id="db_dabaixiong"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.hpwifi.dabaixiong.service" />
+            <property name="implementationPackage" value="com.hpwifi.dabaixiong.service" />
+            <property name="targetProject" value="D:/sourcecode/java/hpwifi/dabaixiong/dabaixiong-manage/src/main/java" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://116.213.142.19:3306/db_dabaixiong?characterEncoding=UTF-8" userId="root" password="Lingshihao.com_12345" />
+		
+		<javaModelGenerator  targetPackage="com.hpwifi.domain.dabaixiong.po" targetProject="D:/sourcecode/java/hpwifi/dabaixiong/dabaixiong-manage/src/main/java"/>
+		<sqlMapGenerator targetPackage="mybatis.dabaixiong"  targetProject="D:/sourcecode/java/hpwifi/dabaixiong/dabaixiong-manage/src/main/resources"/>
+		<javaClientGenerator  targetPackage="com.hpwifi.domain.dabaixiong.mapper"  type="XMLMAPPER" targetProject="D:/sourcecode/java/hpwifi/dabaixiong/dabaixiong-manage/src/main/java"/>
+		<!-- 
+		<table domainObjectName="AdminUser" tableName="admin_user" />
+		<table domainObjectName="User" tableName="busi_user" />
+		<table domainObjectName="Regions" tableName="busi_regions" />
+		
+		<table domainObjectName="PlaneBrand" tableName="busi_plane_brand" />
+		<table domainObjectName="PlaneModel" tableName="busi_plane_model" />
+		
+		<table domainObjectName="ArticleCategory" tableName="busi_article_category" />
+		<table domainObjectName="Article" tableName="busi_article" />
+		
+		<table domainObjectName="LeavewordCategory" tableName="busi_leaveword_category" />
+		
+		
+		
+		<table domainObjectName="PlaneLeg" tableName="busi_plane_leg" />
+		
+		<table domainObjectName="UserPlantPilot" tableName="busi_user_plant_pilot" /> 
+		<table domainObjectName="UserPlantModel" tableName="busi_user_plant_model" /> 
+		<table domainObjectName="UserPlantPilot" tableName="busi_user_plant_pilot" />
+		<table domainObjectName="UserPlantSteward" tableName="busi_user_plant_steward" />
+		
+		<table domainObjectName="PlaneShare" tableName="busi_plane_share" />
+		
+		<table domainObjectName="Leaveword" tableName="busi_leaveword" />
+		
+		
+		
+		<table domainObjectName="Shop" tableName="busi_shop" />
+		<table domainObjectName="Product" tableName="busi_product" />
+		<table domainObjectName="ProductCategory" tableName="busi_product_category" />
+		
+		<table domainObjectName="MissionOrder" tableName="busi_mission_order" />
+		
+		<table domainObjectName="MissionOrderLeg" tableName="busi_mission_order_leg" />
+		
+		<table domainObjectName="Suggest" tableName="busi_suggest" />
+		<table domainObjectName="SuggestItem" tableName="busi_suggest_item" />
+		<table domainObjectName="SuggestRecord" tableName="busi_suggest_record" />
+		
+		<table domainObjectName="Airport" tableName="busi_airport" />
+		
+		<table domainObjectName="UserPlantBill" tableName="busi_user_plant_bill" />
+		
+		<table domainObjectName="UserPlantRecord" tableName="busi_user_plant_record" />
+		-->
+		<table domainObjectName="PlanePilot" tableName="busi_plane_pilot" />
+		
+		     
+	</context>
+</generatorConfiguration>
+

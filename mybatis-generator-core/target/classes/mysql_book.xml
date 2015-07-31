@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/repo/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+	<!-- book -->
+	<context id="book"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin"  />
+	
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.book.service" />
+            <property name="implementationPackage" value="com.book.service" />
+            <property name="targetProject" value="D:/bean" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+       
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/book?characterEncoding=UTF-8" userId="root" password="ok" />
+		
+		<javaModelGenerator  targetPackage="com.book.po" targetProject="D:/bean"/>
+		<sqlMapGenerator targetPackage="com.resources.mybatis.book"  targetProject="D:/bean"/>
+		<javaClientGenerator  targetPackage="com.book.mapper"  type="XMLMAPPER" targetProject="D:/bean"/>
+		<!-- 婊子 -->
+
+	<!-- book-->
+
+		<table domainObjectName="Book" tableName="book"  >
+			<generatedKey column="bookid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="IndexBook" tableName="indexbook"  >
+			<generatedKey column="indexbookid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Author" tableName="author"  >
+			<generatedKey column="authorid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Comment" tableName="comment"  >
+			<generatedKey column="commentid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Reply" tableName="reply"  >
+			<generatedKey column="replyid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Reader" tableName="reader"  >
+			<generatedKey column="readerid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Readerinfo" tableName="readerinfo"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="BookList" tableName="booklist"  >
+			<generatedKey column="booklistid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Address" tableName="address"  >
+			<generatedKey column="addressid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Addressitem" tableName="addressitem"  >
+			<generatedKey column="addritemid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Tabs" tableName="tabs"  >
+			<generatedKey column="tabsid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Atype" tableName="atype"  >
+			<generatedKey column="atypeid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Btype" tableName="btype"  >
+			<generatedKey column="btypeid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Publish" tableName="publish"  >
+			<generatedKey column="publishid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="Documents" tableName="documents"  >
+			<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<table domainObjectName="ListItem" tableName="listitem"  >
+			<generatedKey column="listitemid" sqlStatement="SELECT LAST_INSERT_ID()" />
+		</table>
+		<!--
+		<table domainObjectName="ZnStSettleAccounts" tableName="zn_st_settle_accounts"  ></table>
+		  视图  
+		<table domainObjectName="AuthAgent" tableName="rechargeListView"  />
+		<table domainObjectName="AuthAgent" tableName="rechargelistview"  />
+		-->
+		
+		<table domainObjectName="AuthBussinessDepartment" tableName="auth_bussiness_department"  />
+		<!-- <table domainObjectName="AuthBussinessNews" tableName="auth_bussiness_news"  /> -->
+		
+
+
+	</context>
+</generatorConfiguration>
+

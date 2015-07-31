@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="D:/repo/mysql/mysql-connector-java/5.1.26/mysql-connector-java-5.1.26.jar" />
+	<!-- mao_trade_01 -->
+	<context id="mao_trade"  targetRuntime="MyBatis3" defaultModelType="flat">
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" />
+		<plugin type="org.mybatis.generator.plugins.RenameExampleClassPlugin">
+			<property name="searchString" value="Example$" />
+			<property name="replaceString" value="Criteria" />
+		</plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+		<plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
+		<plugin type="org.mybatis.generator.plugins.MysqlPaginationPlugin" />
+		<!-- 
+        <plugin type="org.mybatis.generator.plugins.MybatisServicePlugin">
+            <property name="targetPackage" value="com.hpwifi.mao.web.service" />
+            <property name="implementationPackage" value="com.hpwifi.mao.web.service" />
+            <property name="targetProject" value="D:/sourcecode/java/hpwifi/maomall/maoadmin/src/main/java" />
+            <property name="enableInsertSelective" value="true" />
+            <property name="enableUpdateByPrimaryKeySelective" value="true" />
+            <property name="enableDeleteByPrimaryKey" value="true" />
+            <property name="enableDeleteByExample" value="true" />
+        </plugin>
+         -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://116.213.142.30:3306/miaofenqi_trade_01?characterEncoding=UTF-8" userId="root" password="ZhouBianYun_6636" />
+		
+		<javaModelGenerator  targetPackage="com.hpwifi.mao.domain.po" targetProject="D:/sourcecode/java/hpwifi/maomall/maoadmin/src/main/java"/>
+		<sqlMapGenerator targetPackage="mybatis.miaofenqi_trade"  targetProject="D:/sourcecode/java/hpwifi/maomall/maoadmin/src/main/resources"/>
+		<javaClientGenerator  targetPackage="com.hpwifi.mao.domain.mapper"  type="XMLMAPPER" targetProject="D:/sourcecode/java/hpwifi/maomall/maoadmin/src/main/java"/>
+		<!-- 
+		<table domainObjectName="FUser" tableName="f_user" />
+
+		 <table domainObjectName="MfqBillRepayLogs" tableName="mfq_bill_repay_logs" />
+		 <table domainObjectName="MfqBillRepayDelayLogs" tableName="mfq_bill_repay_delay_logs" />
+		 <table domainObjectName="MfqInstallmentRates" tableName="mfq_installment_rates" />
+		 
+		 
+		 <table domainObjectName="MfqBillRepay" tableName="mfq_bill_repay" />
+		 
+		 <table domainObjectName="FUserAddress" tableName="f_user_address" />
+		 
+		 <table domainObjectName="MfqDownPaymentCfg" tableName="mfq_down_payment_cfg" />
+		 <table domainObjectName="PwAreas" tableName="pw_areas" />
+		 <table domainObjectName="PwCollege" tableName="pw_college" />
+		 <table domainObjectName="PwSchool" tableName="pw_school" />
+		 
+		 <table domainObjectName="FProduct" tableName="f_product" />
+		 <table domainObjectName="FProductAttr" tableName="f_product_attr" />
+		 <table domainObjectName="FProductAttrPrice" tableName="f_product_attr_price" />
+		 <table domainObjectName="FProductSubcat" tableName="f_product_subcat" />
+		 <table domainObjectName="FOrderDetail" tableName="f_order_detail" />
+		 <table domainObjectName="MfqBill" tableName="mfq_bill" />
+		 <table domainObjectName="MfqBill" tableName="mfq_bill" />
+		 
+		 <table domainObjectName="FOrder" tableName="f_order" />
+		 <table domainObjectName="FOrderRemark" tableName="f_order_remark" />
+		 <table domainObjectName="MfqBill" tableName="mfq_bill" />
+		 <table domainObjectName="MfqUserCert" tableName="mfq_user_cert" />  
+		 <table domainObjectName="DicCategory" tableName="dic_category" />  
+		 <table domainObjectName="DicBrand" tableName="dic_brand" />  
+		 <table domainObjectName="FCatAttr" tableName="f_cat_attr" />  
+		 <table domainObjectName="FCatAttrValue" tableName="f_cat_attr_value" />    
+		 <table domainObjectName="FCatgory" tableName="f_category" />
+		 <table domainObjectName="FAdv" tableName="f_adv" />
+		 <table domainObjectName="FFavorites" tableName="f_favorites" />
+		 <table domainObjectName="FPage" tableName="f_page" />
+		 <table domainObjectName="FTheme" tableName="f_theme" />
+		 -->
+		 <table domainObjectName="MfqUserCertContact" tableName="mfq_user_cert_contact" />  
+		 
+	</context>
+</generatorConfiguration>
+
